@@ -1,0 +1,19 @@
+{
+  "name": "constrained-programming",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "db0": "^0.2.1",
+    "isolated-vm": "^5.0.3",
+    "magicast": "^0.3.5",
+    "ohash": "^1.1.4",
+    "recast": "^0.23.9",
+    "unstorage": "^1.14.4"
+  }
+}
