@@ -1,5 +1,7 @@
 # Constrained Programming
 
+![](./images/db.png)
+
 This is an exploratory prototype, to explore the idea of code as data, and the possibility of what that may entail.
 
 With LLMs, it is certainly better to keep functionality encapsulated, as it will help in retaining the required context for the LLM. I've had the idea for a while that what if we could somehow encapsulate programs, at a granular enough level that you could easily switch out implementations of the same interface. While this does exist in someway by switching out the functions that are called, I wanted it to be even more dynamic than that. So, this is the cumulation of that process.
@@ -141,3 +143,13 @@ const addFn = await createFn({
 
 Here, the `adder` program is dynamically loaded at runtime, and then called with the arguments `{ x: 1, y: 2 }`.
 It may be referenced by name or by the definition ID, the name is just a convenience.
+
+## Future work
+
+This is a very rough prototype, and there are many things which I'd like to explore further:
+
+- **Security**: There are many security concerns with this approach, as it is essentially running arbitrary code. This could be mitigated by running within a sandboxed environment.
+- **Performance**: The current implementation is very slow, as it is essentially running a new VM for each function call. This could be mitigated by running the functions in a single VM.
+- **Error handling**: The current implementation is very brittle, and will throw an error if anything goes wrong. This could be mitigated by adding better error handling.
+- **Type checking**: The current implementation does not do advanced type checking, essentially it just checks that the output type matches the expected type. This could be mitigated by adding a more advanced type checking system.
+- **Constraints**: The current implementation does not have any constraints on the functions, this is a whole area that could be explored further on what this could look like.
